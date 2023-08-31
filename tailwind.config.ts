@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -9,8 +9,11 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      gridTemplateColumns: {
+        sm: 'repeat(auto-fit, minmax(160px, 1fr))',
+      },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

@@ -1,6 +1,8 @@
+import Acknowledgements from '@/components/home/Acknowledgements';
 import Carousel from '@/components/home/Carousel';
 import Feed from '@/components/home/Feed';
 import Introduction from '@/components/home/Introduction';
+import Members from '@/components/home/Members';
 import Container from '@components/Container';
 
 export default function Home() {
@@ -13,8 +15,9 @@ export default function Home() {
           College Computational Neuroscience Laboratory
         </h1>
         <Introduction />
-        <h2 className="text-3xl mt-12 mb-4">News and Events</h2>
         <Feed />
+        <Members />
+        <Acknowledgements />
       </Container>
     </main>
   );
