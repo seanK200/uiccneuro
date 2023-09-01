@@ -18,8 +18,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              Veritas Hall B #413, 85 Songdogwahak-ro, Yeonsu-gu, Incheon 21983,
-              Republic of Korea
+              Yonsei University Veritas Hall B #413, 85 Songdogwahak-ro,
+              Yeonsu-gu, Incheon 21983, Republic of Korea
             </Link>
           </p>
           <p className="font-light text-sm text-slate-400">2023 &copy; UICCN</p>

@@ -4,7 +4,7 @@ import Container from '@components/Container';
 import logo from '@assets/logo.png';
 import logoText from '@assets/logo_light_en.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Nav() {
   return (
@@ -26,16 +26,21 @@ export default function Nav() {
         </Link>
         <ul className="hidden md:flex items-center space-x-8">
           <li>
-            <Link href="/">Events</Link>
+            <Link href="/events">Events</Link>
           </li>
           <li>
-            <Link href="/">Research News</Link>
+            <Link href="/news">Research News</Link>
           </li>
           <li>
-            <Link href="/">People</Link>
+            <Link href="/people">People</Link>
           </li>
           <li className="rounded px-3 py-1 bg-blue-600 text-white font-medium">
-            <Link href="/">Contact Us</Link>
+            <Link href="/contact">Contact Us</Link>
+          </li>
+          <li className="rounded-full p-2 bg-slate-200 text-slate-500">
+            <Link href="/login" className="leading-none">
+              <FontAwesomeIcon icon={faUser} className="w-4" />
+            </Link>
           </li>
         </ul>
         <button className="shrink-0 flex md:hidden justify-center items-center">
