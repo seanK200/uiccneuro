@@ -13,7 +13,10 @@ type Member = {
   bio?: string;
 };
 
-const data: Member[] = [
+const lorum =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis consequat arcu. Ut ultrices sem id lorem tristique, et hendrerit dui hendrerit. Aenean fermentum quam nulla, sed auctor lacus consectetur at. Nunc hendrerit libero quis lectus tempus bibendum. Duis ut pharetra ex, at fermentum eros. Nunc at pulvinar ipsum, eu tristique ligula. Fusce consequat bibendum ante, vitae pharetra tellus ultrices vitae. Nulla nunc enim, ullamcorper eu cursus sed, sollicitudin sodales tortor. Nullam mollis ut mauris quis pellentesque. Nulla euismod, nibh id tempor dignissim, magna mi varius nunc, quis luctus enim est et nisi. Praesent in pretium lorem. Suspendisse consectetur justo sit amet tellus pharetra convallis. Nunc vitae urna sed elit pharetra eleifend sit amet sit amet est. Sed facilisis nec nisl in consequat. Donec venenatis metus sit amet scelerisque facilisis. Morbi lectus dolor, sagittis et euismod ac, aliquam ut arcu.';
+
+export const dummyMemberData: Member[] = [
   {
     name: {
       en: 'Dr. Sehun Chun',
@@ -23,6 +26,7 @@ const data: Member[] = [
     affiliation:
       'Integrated Science and Engineering Division, Underwood International College, Yonsei University',
     url: 'https://sites.google.com/site/uicschun/?pli=1',
+    bio: lorum,
   },
   {
     name: {
@@ -32,6 +36,7 @@ const data: Member[] = [
     title: 'Research Assistant',
     affiliation:
       'Institute of Human Complexity and System Science, Yonsei University',
+    bio: lorum,
   },
   {
     name: {
@@ -40,6 +45,7 @@ const data: Member[] = [
     },
     title: 'Undergraduate Research Assistant',
     affiliation: 'Nano Science and Engineering, Yonsei University',
+    bio: lorum,
   },
 ];
 
@@ -48,7 +54,7 @@ export default function Members() {
     <section>
       <h2 className="text-3xl mt-12 mb-4">People</h2>
       <div className="grid grid-cols-sm gap-8">
-        {data.map((member) => (
+        {dummyMemberData.map((member) => (
           <MemberItem key={member.name.en + member.title} data={member} />
         ))}
       </div>

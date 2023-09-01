@@ -41,7 +41,7 @@ export default function Nav() {
           />
         </Link>
         <ul
-          onClick={() => setIsOpen((p) => !p)}
+          onClick={() => setIsOpen(false)}
           className={`${
             isOpen
               ? 'absolute top-0 left-0 right-0 bottom-0 flex flex-col bg-white p-12 z-10'
