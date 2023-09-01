@@ -3,7 +3,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
-type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement>;
 
 export default function Profile() {
   return (
