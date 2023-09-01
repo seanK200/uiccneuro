@@ -1,5 +1,10 @@
 import Container from '@components/Container';
 import { dummyMemberData } from '@/components/home/Members';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'UICCN: My Profile',
+};
 
 export default function People() {
   const data = dummyMemberData;

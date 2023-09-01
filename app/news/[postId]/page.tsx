@@ -6,6 +6,11 @@ import logoOutline from '@assets/logo_outline_light.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'UICCN: Post',
+};
 
 export default function BlogPostView({
   params,

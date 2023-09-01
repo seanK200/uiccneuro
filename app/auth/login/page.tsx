@@ -1,6 +1,11 @@
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'UICCN: Login',
+};
 
 export default function Login() {
   return (

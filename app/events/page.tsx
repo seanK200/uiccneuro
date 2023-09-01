@@ -1,5 +1,10 @@
 import Container from '@components/Container';
 import BlogFeed, { dummyBlogPosts } from '@/components/blog/BlogFeed';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'UICCN: Events',
+};
 
 export default function Events() {
   const data = dummyBlogPosts.filter((post) => Boolean(post.event));

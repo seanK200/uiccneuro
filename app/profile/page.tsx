@@ -1,8 +1,13 @@
 import Container from '@/components/Container';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Metadata } from 'next';
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
+
+export const metadata: Metadata = {
+  title: 'UICCN: My Profile',
+};
 
 export default function Profile() {
   return (

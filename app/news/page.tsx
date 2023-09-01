@@ -1,6 +1,11 @@
 import BlogFeed from '@/components/blog/BlogFeed';
 import Container from '@components/Container';
 import { dummyBlogPosts } from '@/components/blog/BlogFeed';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'UICCN: News',
+};
 
 export default function News() {
   const data = dummyBlogPosts.filter((post) => !Boolean(post.event));
