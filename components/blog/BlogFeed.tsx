@@ -3,7 +3,7 @@ import BlogFeedItem, { BlogPost } from './BlogFeedItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-const data: BlogPost[] = [
+export const dummyBlogPosts: BlogPost[] = [
   {
     id: '1356',
     title: 'Search Models in Financial Markets',
@@ -26,12 +26,23 @@ const data: BlogPost[] = [
         url: '/',
       },
     ],
+    event: {
+      startsAt: DateTime.fromObject({
+        year: 2023,
+        month: 9,
+        day: 15,
+        hour: 13,
+      }),
+      endsAt: DateTime.fromObject({ year: 2023, month: 9, day: 15, hour: 15 }),
+      location: 'Daewoo Annex Hall B103, Yonsei University Sinchon Campus',
+      url: 'https://uic.yonsei.ac.kr',
+    },
   },
   {
-    id: '1356',
+    id: '1389',
     title: 'Search Models in Financial Markets',
     contents:
-      'Speaker: Prof. Speaker: Prof. Jungsuk Han (Dept. of Business Mgmt., SNU)\nVenue: Daewoo Annex Hall, B103, Sinchon Campus\nTime: Sep 15, 2023 (Fri) 13:00 - 15:00',
+      'Speakers: Prof. Speaker: Prof. Jungsuk Han (Dept. of Business Mgmt., SNU)\nVenue: Daewoo Annex Hall, B103, Sinchon Campus\nTime: Sep 15, 2023 (Fri) 13:00 - 15:00',
     author: {
       name: 'Youngwoo Kim',
       hidden: true,
@@ -52,16 +63,25 @@ const data: BlogPost[] = [
   },
 ];
 
-export default function BlogFeed() {
+export default function BlogFeed({
+  data,
+  count,
+}: {
+  data?: BlogPost[];
+  count?: number;
+}) {
+  data = data || dummyBlogPosts;
   return (
     <div className="flex flex-col items-center">
       {data.map((post) => (
         <BlogFeedItem key={post.id} post={post} />
       ))}
-      <button className="my-6 flex items-center space-x-1 text-blue-900 hover:underline">
-        <span>View more</span>
-        <FontAwesomeIcon icon={faChevronRight} className="h-3" />
-      </button>
+      {count !== undefined && (
+        <button className="my-6 flex items-center space-x-1 text-blue-900 hover:underline">
+          <span>View more</span>
+          <FontAwesomeIcon icon={faChevronRight} className="h-3" />
+        </button>
+      )}
     </div>
   );
 }
