@@ -26,6 +26,9 @@ export default function Nav() {
         </Link>
         <ul className="hidden md:flex items-center space-x-8">
           <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
             <Link href="/events">Events</Link>
           </li>
           <li>
@@ -34,11 +37,8 @@ export default function Nav() {
           <li>
             <Link href="/people">People</Link>
           </li>
-          <li className="rounded px-3 py-1 bg-blue-600 text-white font-medium">
-            <Link href="/contact">Contact Us</Link>
-          </li>
           <li className="rounded-full p-2 bg-slate-200 text-slate-500">
-            <Link href="/login" className="leading-none">
+            <Link href="/auth/login" className="leading-none">
               <FontAwesomeIcon icon={faUser} className="w-4" />
             </Link>
           </li>

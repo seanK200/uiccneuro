@@ -7,7 +7,7 @@ export default function Container({
 }) {
   return (
     <div
-      className={`mx-auto w-100 max-w-6xl px-8 md:px-16 2xl:px-0 ${
+      className={`mx-auto w-full max-w-6xl px-8 md:px-16 2xl:px-0 ${
         className || ''
       }`}
     >

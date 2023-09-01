@@ -9,6 +9,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        primary: '#5A7FFF',
+        secondary: '#6DF192',
+      },
       gridTemplateColumns: {
         sm: 'repeat(auto-fit, minmax(160px, 1fr))',
       },

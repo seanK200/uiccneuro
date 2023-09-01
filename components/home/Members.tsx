@@ -8,8 +8,9 @@ type Member = {
   };
   title: string;
   affiliation: string | string[];
-  bio?: string[];
   url?: string;
+  email?: string;
+  bio?: string;
 };
 
 const data: Member[] = [
@@ -21,6 +22,7 @@ const data: Member[] = [
     title: 'Principle Investigator',
     affiliation:
       'Integrated Science and Engineering Division, Underwood International College, Yonsei University',
+    url: 'https://sites.google.com/site/uicschun/?pli=1',
   },
   {
     name: {
@@ -30,10 +32,6 @@ const data: Member[] = [
     title: 'Research Assistant',
     affiliation:
       'Institute of Human Complexity and System Science, Yonsei University',
-    bio: [
-      'B.S.E. in Bio-Convergence, Yonsei University',
-      'B.S.E. in Computer Science, Yonsei University',
-    ],
   },
   {
     name: {
@@ -59,16 +57,34 @@ export default function Members() {
 }
 
 function MemberItem({ data }: { data: Member }) {
+  const name = (
+    <>
+      {data.name.en}
+      {data.name.kr && (
+        <>
+          <br />
+          <span className="font-normal">{data.name.kr}</span>
+        </>
+      )}
+    </>
+  );
   return (
     <div>
       <DummyImage className="mb-2" />
-      <h3 className="text-xl font-semibold">
-        {data.name.en}
-        {data.name.kr && (
-          <>
-            <br />
-            <span className="font-normal">{data.name.kr}</span>
-          </>
+      <h3
+        className={`text-xl font-semibold ${data.url ? 'hover:underline' : ''}`}
+      >
+        {data.url ? (
+          <a
+            href={data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            {name}
+          </a>
+        ) : (
+          name
         )}
       </h3>
       <p className="text-lg text-blue-600 mb-2">{data.title}</p>
